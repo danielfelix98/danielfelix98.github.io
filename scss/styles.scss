@@ -1002,3 +1002,63 @@ footer {
     }
 
 }
+
+
+/* Global Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background: $background;
+    color: $text;
+}
+
+header, footer, .btn-rounded-white, .background-alt, #contact {
+    background: $background-alt;
+    color: $heading;
+}
+
+a, .btn-rounded-white {
+    color: $heading;
+    &:hover {
+        background: $base-color;
+        color: $background;
+    }
+}
+
+/* Component Specific Updates */
+.shadow, .shadow-large {
+    box-shadow: 0 1px 3px rgba(255,255,255,0.12), 0 1px 2px rgba(255,255,255,0.24);
+}
+
+.heading:after {
+    background: $base-color;
+}
+
+#lead-overlay {
+    background: rgba($base-color, 0.8);
+}
+
+.vtimeline-icon, .vtimeline-content, .education-block, .project, .optional-section-block {
+    background: $background-alt;
+    color: $text;
+}
+
+/* Adjustments for form elements in Contact Section */
+#contact-form input, #contact-form textarea {
+    background: darken($background-alt, 5%);
+    color: $heading;
+    &:focus {
+        background: darken($background-alt, 10%);
+    }
+}
+
+#contact-form button {
+    background: $base-color;
+    color: $heading;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media only screen and (max-width: 992px), only screen and (max-width: 768px), only screen and (max-width: 480px) {
+    /* Adjust styles for smaller screens to maintain readability and visual appeal */
+}
+

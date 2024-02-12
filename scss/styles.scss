@@ -34,19 +34,19 @@
 */
 
 // Define base and accent colors
-$base-color: #ffa500; // Laranja para cor base
-$base-color-hover: darken($base-color, 10%);
+//#ffa500: #ffa500; // Laranja para cor base
+//darken(#ffa500, 10%): darken(#ffa500, 10%);
 
 // Define background colors
-$background: #000; // Preto para fundo principal
-$background-alt: #111; // Preto um pouco mais claro para fundo alternativo
+//#000: #000; // Preto para fundo principal
+//#111: #111; // Preto um pouco mais claro para fundo alternativo
 
 // Define text colors
-$heading: #fff; // Branco para títulos
-$text: #bbb; // Cinza claro para texto
+//#fff: #fff; // Branco para títulos
+//#bbb: #bbb; // Cinza claro para texto
 
 // Define border colors
-$border: #333;
+//#333: #333;
 
 
 /*
@@ -88,8 +88,8 @@ $border: #333;
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    background: $background;
-    color: $text;
+    background: #000;
+    color: #bbb;
 
     &.active {
         overflow: hidden;
@@ -101,15 +101,15 @@ body {
 .no-js {
     #experience-timeline {
         > div {
-            background: $background;
+            background: #000;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid $border;
+            border: 1px solid #333;
 
             h3 {
                 font-size: 1.5em;
                 font-weight: 300;
-                color: $heading;
+                color: #fff;
                 display: inline-block;
                 margin: 0;
             }
@@ -122,7 +122,7 @@ body {
             }
 
             p {
-                color: $text;
+                color: #bbb;
                 font-size: 0.9em;
                 margin: 0;
             }
@@ -157,7 +157,7 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: #000;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -171,18 +171,18 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: #ffa500;
         padding: 10px;
 
         &:hover {
-            color: $base-color-hover;
+            color: darken(#ffa500, 10%);
             text-decoration: none;
             background: #eee;
             border-radius: 4px;
         }
 
         &:focus {
-            color: $base-color;
+            color: #ffa500;
             text-decoration: none;
         }
     }
@@ -209,24 +209,24 @@ header {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: $base-color;
+    color: #ffa500;
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: $background;
+    background: #000;
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: $background;
+    background: #000;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: $base-color;
+    color: #ffa500;
 
     span {
         font-size: 0.5em;
@@ -247,7 +247,7 @@ footer {
 
     p {
         margin: 0;
-        color: $text;
+        color: #bbb;
     }
 }
 
@@ -261,12 +261,12 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        border: 3px solid lighten(#bbb, 25%);
         text-align:center;
     }
 
     i {
-        color: $text;
+        color: #bbb;
     }
 }
 
@@ -286,11 +286,11 @@ footer {
 
     a {
         display: block;
-        color: $text;
+        color: #bbb;
         padding: 10px;
 
         &:hover {
-            color: $base-color;
+            color: #ffa500;
         }
     }
 }
@@ -304,7 +304,7 @@ footer {
     @include transition();
 
     &:hover {
-        color: $base-color;
+        color: #ffa500;
         background: #fff;
         text-decoration: none;
     }
@@ -334,12 +334,12 @@ footer {
         left: 0;
         right: 0;
         margin: 0 auto;
-        background: $base-color;
+        background: #ffa500;
     }
 }
 
 .background-alt {
-    background: $background-alt;
+    background: #111;
 }
 
 /*
@@ -381,7 +381,7 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: lighten(#ffa500, 25%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -396,7 +396,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba(darken(#ffa500, 10%), 0.8);
     z-index: 1;
 }
 
@@ -417,7 +417,7 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid lighten(#ffa500, 25%);
         text-align:center;
     }
 
@@ -450,14 +450,14 @@ footer {
 
 #about {
     padding: 75px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid #333;
 
     h2 {
-        color: $heading;
+        color: #fff;
     }
 
     p {
-        color: $text;
+        color: #bbb;
         margin: 0;
     }
 }
@@ -471,10 +471,10 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid #333;
 
     h2 {
-        color: $heading;
+        color: #fff;
     }
 }
 
@@ -492,7 +492,7 @@ footer {
         right: auto;
         height: 100%;
         width: 3px;
-        background: $base-color;
+        background: #ffa500;
         z-index: 0;
     }
 
@@ -501,8 +501,8 @@ footer {
         content: '';
         width: 3px;
         height: 40px;
-        background: $base-color;
-        background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
+        background: #ffa500;
+        background: linear-gradient(to bottom, #ffa500, rgba(#ffa500, 0));
         top: 100%;
         left: 303px;
     }
@@ -519,7 +519,7 @@ footer {
     h3 {
         font-size: 1.5em;
         font-weight: 300;
-        color: $heading;
+        color: #fff;
         display: inline-block;
         margin: 0;
     }
@@ -532,7 +532,7 @@ footer {
     }
 
     p {
-        color: $text;
+        color: #bbb;
         font-size: 0.9em;
         margin: 0;
     }
@@ -550,7 +550,7 @@ footer {
     color: #fff;
     width: 50px;
     height: 50px;
-    background: $base-color;
+    background: #ffa500;
     border-radius: 50%;
     float: left;
     z-index: 99;
@@ -581,11 +581,11 @@ footer {
 
 #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid #333;
     text-align: center;
 
     h2 {
-        color: $heading;
+        color: #fff;
         margin-bottom: 50px;
     }
 }
@@ -594,23 +594,23 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid $border;
+    border: 1px solid #333;
     text-align: left;
 
     h3 {
         font-weight: 500;
         float: left;
         margin: 0;
-        color: $heading;
+        color: #fff;
     }
 
     span {
-        color: $text;
+        color: #bbb;
         float: right;
     }
 
     h4 {
-        color: $text;
+        color: #bbb;
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
@@ -618,7 +618,7 @@ footer {
 
     p, ul {
         margin: 0;
-        color: $text;
+        color: #bbb;
         font-size: 0.9em;
     }
 
@@ -635,11 +635,11 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid #333;
     text-align: center;
 
     h2 {
-        color: $heading;
+        color: #fff;
         margin-bottom: 50px;
     }
 }
@@ -667,12 +667,12 @@ footer {
     h3 {
         font-size: 1.5em;
         font-weight: 300;
-        color: $heading;
+        color: #fff;
         margin: 0 0 15px 0;
     }
 
     p {
-        color: $text;
+        color: #bbb;
         margin: 0 0 15px 0;
         font-size: 0.9em;
     }
@@ -702,7 +702,7 @@ footer {
     text-align: center;
 
     h2 {
-        color: $heading;
+        color: #fff;
         margin-bottom: 50px;
     }
 
@@ -717,8 +717,8 @@ footer {
         display: inline-block;
         margin: 7px;
         padding: 5px 10px;
-        color: $heading;
-        background: darken($background-alt, 5%);
+        color: #fff;
+        background: darken(#111, 5%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
@@ -733,7 +733,7 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: $base-color;
+    background: #ffa500;
     text-align: center;
 
     h2 {
@@ -754,7 +754,7 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
+        background: darken(#ffa500, 15%);
         color: #fff;
         @include transition();
         @include placeholder {
@@ -763,7 +763,7 @@ footer {
 
         &:focus {
             outline: none;
-            background: darken($base-color, 25%);
+            background: darken(#ffa500, 25%);
         }
     }
 
@@ -779,7 +779,7 @@ footer {
         border-radius: 4px;
         padding: 5px 10px;
         border: none;
-        color: $base-color;
+        color: #ffa500;
         font-weight: 700;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         @include transition();
@@ -799,10 +799,10 @@ footer {
 .optional-section {
     padding: 50px 15px;
     text-align: center;
-    border-top: 1px solid $border;
+    border-top: 1px solid #333;
 
     h2 {
-        color: $heading;
+        color: #fff;
     }
 }
 
@@ -810,18 +810,18 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid $border;
+    border: 1px solid #333;
     background: #fff;
     text-align: left;
 
     h3 {
         font-weight: 500;
         margin: 0 0 15px 0;
-        color: $heading;
+        color: #fff;
     }
 
     h4 {
-        color: $text;
+        color: #bbb;
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
@@ -829,7 +829,7 @@ footer {
 
     p, ul {
         margin: 0 0 15px 0;
-        color: $text;
+        color: #bbb;
         font-size: 0.9em;
     }
 
@@ -1002,63 +1002,3 @@ footer {
     }
 
 }
-
-
-/* Global Styles */
-body {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    background: $background;
-    color: $text;
-}
-
-header, footer, .btn-rounded-white, .background-alt, #contact {
-    background: $background-alt;
-    color: $heading;
-}
-
-a, .btn-rounded-white {
-    color: $heading;
-    &:hover {
-        background: $base-color;
-        color: $background;
-    }
-}
-
-/* Component Specific Updates */
-.shadow, .shadow-large {
-    box-shadow: 0 1px 3px rgba(255,255,255,0.12), 0 1px 2px rgba(255,255,255,0.24);
-}
-
-.heading:after {
-    background: $base-color;
-}
-
-#lead-overlay {
-    background: rgba($base-color, 0.8);
-}
-
-.vtimeline-icon, .vtimeline-content, .education-block, .project, .optional-section-block {
-    background: $background-alt;
-    color: $text;
-}
-
-/* Adjustments for form elements in Contact Section */
-#contact-form input, #contact-form textarea {
-    background: darken($background-alt, 5%);
-    color: $heading;
-    &:focus {
-        background: darken($background-alt, 10%);
-    }
-}
-
-#contact-form button {
-    background: $base-color;
-    color: $heading;
-}
-
-/* Media Queries for Responsive Adjustments */
-@media only screen and (max-width: 992px), only screen and (max-width: 768px), only screen and (max-width: 480px) {
-    /* Adjust styles for smaller screens to maintain readability and visual appeal */
-}
-
